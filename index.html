@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
 	<link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@400;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
 	<title>ActiveBox</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -44,15 +46,15 @@
 				<div class="header__logo">
 					<img src="assets/images/logo.png" alt="" class="logo__img">
 				</div>
-				<nav class="nav">
-					<a href="#features" class="nav__link">features</a>
-					<a href="#works" class="nav__link">works</a>
-					<a href="#team" class="nav__link">our team</a>
-					<a href="#testimonials" class="nav__link">testimonials</a>
-					<a href="#download" class="nav__link">download</a>
+				<nav class="nav" id="nav">
+					<a href="#" data-scroll="#features" class="nav__link">features</a>
+					<a href="#" data-scroll="#works" class="nav__link">works</a>
+					<a href="#" data-scroll="#team" class="nav__link">our team</a>
+					<a href="#" data-scroll="#reviews" class="nav__link">testimonials</a>
+					<a href="#" data-scroll="#download" class="nav__link">download</a>
 				</nav>
 
-				<button class="burger" type="button">
+				<button class="burger" type="button" id="navToggle">
 					<span class="burger__item">Menu</span>
 				</button>
 			</div>
@@ -73,8 +75,8 @@
 	</div>
 	<!-- /1st screen Intro -->
 	<!-- 2nd screen Features -->
-	<div class="container">
-		<div class="features" id="features">
+	<div class="container" id="features">
+		<div class="features">
 			<div class="features__item">
 				<img src="assets/images/features/features-1.png" alt="" class="features__img">
 				<div class="features__title">Easily Customised</div>
@@ -281,21 +283,40 @@
 	</div>
 	<!-- /4th screen Team -->
 	<!-- 5th screen Testimonials -->
-	<div class="reviews" id="testimonials">
+	<div class="reviews" id="reviews">
 		<div class="container">
-			<div class="reviews__item">
-				<div class="reviews__photo">
-					<img class="reviews__img" src="assets/images/reviews-1.jpg" alt="">
+			<div id="reviewsSlider" class="reviews__slider">
+				<div>
+					<div class="reviews__item">
+						<div class="reviews__photo">
+							<img class="reviews__img" src="assets/images/reviews-1.jpg" alt="">
+						</div>
+						<div class="reviews__content">
+							<div class="reviews__text">
+								“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”
+							</div>
+							<div class="reviews__author">
+								Susan Sims, Interaction Designer at XYZ
+							</div>
+						</div>
+					</div><!-- /.reviews__item -->
 				</div>
-				<div class="reviews__content">
-					<div class="reviews__text">
-						“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”
-					</div>
-					<div class="reviews__author">
-						Susan Sims, Interaction Designer at XYZ
-					</div>
+				<div>
+					<div class="reviews__item">
+						<div class="reviews__photo">
+							<img class="reviews__img" src="assets/images/reviews-1.jpg" alt="">
+						</div>
+						<div class="reviews__content">
+							<div class="reviews__text">
+								“Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, alias!	 quam...”
+							</div>
+							<div class="reviews__author">
+								Susan Sims, Interaction Designer at XYZ
+							</div>
+						</div>
+					</div><!-- /.reviews__item -->
 				</div>
-			</div><!-- /.reviews__item -->
+			</div>
 		</div><!-- /.container -->
 	</div>
 	<!-- /5th screen Testimonials -->
@@ -361,6 +382,9 @@
 		</div>
 	</footer>
 	<!-- /Footer -->
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="assets/js/app.js"></script>
+	<!-- /Scripts -->
 </body>
 </html>
